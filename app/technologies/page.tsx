@@ -51,7 +51,7 @@ export default function TechnologiesPage() {
       <TechnologiesHero />
       <Divider />
       <DomainOverview />
-      <Divider />
+      <Divider spacing="lg" />
       <DomainDeepDive />
       <Divider />
       <ValidationSection />

@@ -47,7 +47,7 @@ function DomainBlock({
             {domain.name}
           </h3>
           <div>
-            <span className="mb-[var(--space-1)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+            <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
               Overview
             </span>
             <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
@@ -55,7 +55,7 @@ function DomainBlock({
             </p>
           </div>
           <div>
-            <span className="mb-[var(--space-1)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+            <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
               Technical Significance
             </span>
             <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
@@ -66,7 +66,7 @@ function DomainBlock({
 
         <Stack gap="md">
           <div>
-            <span className="mb-[var(--space-1)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+            <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
               Applications
             </span>
             {domain.applications.length > 0 ? (
@@ -87,7 +87,7 @@ function DomainBlock({
             )}
           </div>
           <div>
-            <span className="mb-[var(--space-1)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+            <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
               Roadmap
             </span>
             <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
@@ -96,7 +96,7 @@ function DomainBlock({
           </div>
           <Link
             href={`/technologies/${domain.slug}`}
-            className="inline-block text-[var(--text-small-size)] text-[var(--interactive-primary)] hover:text-[var(--interactive-primary-hover)] transition-colors"
+            className="mt-[var(--space-2)] inline-block text-[var(--text-small-size)] text-[var(--interactive-primary)] hover:text-[var(--interactive-primary-hover)] transition-colors"
           >
             Full domain detail &rarr;
           </Link>
@@ -139,7 +139,7 @@ function DomainBlock({
       )}
 
       <div>
-        <span className="mb-[var(--space-1)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+        <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
           Roadmap
         </span>
         <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
@@ -148,7 +148,7 @@ function DomainBlock({
       </div>
       <Link
         href={`/technologies/${domain.slug}`}
-        className="inline-block text-[var(--text-small-size)] text-[var(--interactive-primary)] hover:text-[var(--interactive-primary-hover)] transition-colors"
+        className="mt-[var(--space-2)] inline-block text-[var(--text-small-size)] text-[var(--interactive-primary)] hover:text-[var(--interactive-primary-hover)] transition-colors"
       >
         Full domain detail &rarr;
       </Link>
@@ -164,7 +164,7 @@ export function DomainDeepDive() {
           {technologyDomains.map((domain, index) => (
             <div
               key={domain.slug}
-              className="border-t border-[var(--border-primary)] pt-[var(--space-8)]"
+              className="border-t border-[var(--border-primary)] pt-[var(--space-10)]"
             >
               <DomainBlock domain={domain} index={index} />
             </div>

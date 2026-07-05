@@ -65,10 +65,12 @@ export function ValidationSection() {
               ))}
             </dl>
           ) : (
-            <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
-              Validation entries to be added as certifications, trials, and partnerships are
-              confirmed and disclosable.
-            </p>
+            <div className="border-t border-[var(--border-primary)] pt-[var(--space-4)]">
+              <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
+                Validation entries to be added as certifications, trials, and partnerships are
+                confirmed and disclosable.
+              </p>
+            </div>
           )}
         </Stack>
       </Container>
