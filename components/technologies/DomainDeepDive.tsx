@@ -47,7 +47,7 @@ function DomainBlock({
             {domain.name}
           </h3>
           <div>
-            <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+            <span className="mb-[var(--space-2)] block font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
               Overview
             </span>
             <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
@@ -55,7 +55,7 @@ function DomainBlock({
             </p>
           </div>
           <div>
-            <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+            <span className="mb-[var(--space-2)] block font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
               Technical Significance
             </span>
             <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
@@ -66,7 +66,7 @@ function DomainBlock({
 
         <Stack gap="md">
           <div>
-            <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+            <span className="mb-[var(--space-2)] block font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
               Applications
             </span>
             {domain.applications.length > 0 ? (
@@ -87,7 +87,7 @@ function DomainBlock({
             )}
           </div>
           <div>
-            <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+            <span className="mb-[var(--space-2)] block font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
               Roadmap
             </span>
             <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
@@ -96,7 +96,7 @@ function DomainBlock({
           </div>
           <Link
             href={`/technologies/${domain.slug}`}
-            className="mt-[var(--space-2)] inline-block text-[var(--text-small-size)] text-[var(--interactive-primary)] hover:text-[var(--interactive-primary-hover)] transition-colors"
+            className="mt-[var(--space-2)] inline-block text-[var(--text-small-size)] text-[var(--accent-primary)] hover:text-[var(--accent-primary-hover)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
           >
             Full domain detail &rarr;
           </Link>
@@ -123,7 +123,7 @@ function DomainBlock({
           {domain.applications.map((app, i) => (
             <li
               key={app}
-              className="border-l-2 border-[var(--border-primary)] pl-[var(--space-5)] transition-colors hover:border-[var(--interactive-primary)]"
+              className="border-l-2 border-[var(--border-primary)] pl-[var(--space-5)] transition-colors hover:border-[var(--accent-primary)]"
             >
               <span className="mb-[var(--space-1)] block text-[var(--text-small-size)] text-[var(--text-muted)]">
                 {String(i + 1).padStart(2, "0")}
@@ -139,7 +139,7 @@ function DomainBlock({
       )}
 
       <div>
-        <span className="mb-[var(--space-2)] block font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+        <span className="mb-[var(--space-2)] block font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
           Roadmap
         </span>
         <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">
@@ -148,7 +148,7 @@ function DomainBlock({
       </div>
       <Link
         href={`/technologies/${domain.slug}`}
-        className="mt-[var(--space-2)] inline-block text-[var(--text-small-size)] text-[var(--interactive-primary)] hover:text-[var(--interactive-primary-hover)] transition-colors"
+        className="mt-[var(--space-2)] inline-block text-[var(--text-small-size)] text-[var(--accent-primary)] hover:text-[var(--accent-primary-hover)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
       >
         Full domain detail &rarr;
       </Link>
@@ -157,16 +157,25 @@ function DomainBlock({
 }
 
 export function DomainDeepDive() {
+  const domains = technologyDomains;
+
   return (
     <Section spacing="spacious">
       <Container size="xl">
         <Stack gap="xl" className="gap-[var(--space-16)]">
-          {technologyDomains.map((domain, index) => (
+          {domains.map((domain, index) => (
             <div
               key={domain.slug}
               className="border-t border-[var(--border-primary)] pt-[var(--space-10)]"
             >
               <DomainBlock domain={domain} index={index} />
+              {index === 0 && (
+                <blockquote className="mt-[var(--space-10)] border-l-2 border-[var(--accent-primary)] pl-[var(--space-5)] italic text-[var(--text-body-lg-size)] leading-[var(--text-body-leading)] text-[var(--text-tertiary)]">
+                  Defence technology is not a product category — it is an operational constraint.
+                  Every system must perform under conditions that cannot be simulated in a
+                  laboratory.
+                </blockquote>
+              )}
             </div>
           ))}
         </Stack>

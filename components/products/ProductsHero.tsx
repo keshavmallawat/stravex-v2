@@ -22,12 +22,15 @@ import { productsThesis } from "@/lib/data/products";
 export function ProductsHero() {
   return (
     <Section spacing="hero">
-      <Container size="xl">
+      <Container size="prose">
         <Stack gap="lg">
-          <h1 className="max-w-[800px] text-[var(--text-h1-size)] leading-[var(--text-h1-leading)] text-[var(--text-primary)]">
+          <span className="block font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--accent-primary)]">
+            Product Portfolio
+          </span>
+          <h1 className="text-[var(--text-h1-size)] leading-[var(--text-h1-leading)] text-[var(--text-primary)]">
             {productsThesis.headline}
           </h1>
-          <p className="max-w-[640px] text-[var(--text-lead-size)] leading-[var(--text-body-leading)] text-[var(--text-secondary)]">
+          <p className="text-[var(--text-lead-size)] leading-[var(--text-body-leading)] text-[var(--text-secondary)]">
             {productsThesis.body}
           </p>
         </Stack>

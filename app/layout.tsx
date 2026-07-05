@@ -13,6 +13,8 @@
  * on every phase, never a separate pass done at the end.
  */
 
+import "./globals.css";
+
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { SkipLink } from "@/components/ui/SkipLink";

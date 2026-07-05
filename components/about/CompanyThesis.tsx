@@ -30,7 +30,7 @@ export function CompanyThesis() {
             </h2>
           </Stack>
 
-          <div className="max-w-[720px] space-y-[var(--space-5)]">
+          <div className="max-w-[720px] space-y-[var(--space-4)]">
             <p className="text-[var(--text-body-size)] leading-[var(--text-body-leading)] text-[var(--text-secondary)]">
               Much of the existing detect-and-intercept infrastructure was designed for a different
               scale and tempo of threat — fewer, larger, slower-evolving. The new threat environment

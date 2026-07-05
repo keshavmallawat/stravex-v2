@@ -43,7 +43,7 @@ export function LatestNews() {
             </h2>
             <Link
               href="/news"
-              className="text-[var(--text-body-size)] text-[var(--interactive-primary)] hover:text-[var(--interactive-primary-hover)] transition-colors"
+              className="text-[var(--text-body-size)] text-[var(--accent-primary)] hover:text-[var(--accent-primary-hover)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
             >
               View all news →
             </Link>
@@ -51,10 +51,14 @@ export function LatestNews() {
 
           <Grid columns={{ sm: 1, md: 3 }} gap="md">
             {articles.map((article) => (
-              <Link key={article.slug} href={`/news/${article.slug}`}>
+              <Link
+                key={article.slug}
+                href={`/news/${article.slug}`}
+                className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
+              >
                 <Surface
                   variant="secondary"
-                  className="h-full rounded-[var(--radius-md)] border border-[var(--border-primary)] p-[var(--space-5)] transition-colors hover:border-[var(--interactive-primary)]"
+                  className="h-full rounded-[var(--radius-md)] border border-[var(--border-primary)] p-[var(--space-5)] transition-colors hover:border-[var(--accent-primary)]"
                 >
                   <Stack gap="sm">
                     <Cluster gap="sm">

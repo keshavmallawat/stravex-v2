@@ -71,7 +71,7 @@ export function ProductExplorer() {
           {/* Filter controls */}
           <div className="flex flex-wrap gap-[var(--space-4)]">
             <fieldset>
-              <legend className="mb-[var(--space-2)] font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+              <legend className="mb-[var(--space-2)] font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
                 Mission Domain
               </legend>
               <div className="flex flex-wrap gap-[var(--space-2)]">
@@ -83,8 +83,8 @@ export function ProductExplorer() {
                     aria-pressed={missionFilter === f.value}
                     className={`rounded-[var(--radius-sm)] px-[var(--space-3)] py-[var(--space-1)] text-[var(--text-small-size)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)] ${
                       missionFilter === f.value
-                        ? "bg-[var(--interactive-primary)] text-[var(--text-inverse)]"
-                        : "border border-[var(--border-primary)] bg-[var(--surface-primary)] text-[var(--text-secondary)] hover:border-[var(--interactive-primary)] hover:text-[var(--text-primary)]"
+                        ? "bg-[var(--accent-primary)] text-[var(--accent-primary-foreground)]"
+                        : "border border-[var(--border-primary)] bg-[var(--surface-primary)] text-[var(--text-secondary)] hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)]"
                     }`}
                   >
                     {f.label}
@@ -94,7 +94,7 @@ export function ProductExplorer() {
             </fieldset>
 
             <fieldset>
-              <legend className="mb-[var(--space-2)] font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+              <legend className="mb-[var(--space-2)] font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
                 Maturity Status
               </legend>
               <div className="flex flex-wrap gap-[var(--space-2)]">
@@ -106,8 +106,8 @@ export function ProductExplorer() {
                     aria-pressed={maturityFilter === f.value}
                     className={`rounded-[var(--radius-sm)] px-[var(--space-3)] py-[var(--space-1)] text-[var(--text-small-size)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)] ${
                       maturityFilter === f.value
-                        ? "bg-[var(--interactive-primary)] text-[var(--text-inverse)]"
-                        : "border border-[var(--border-primary)] bg-[var(--surface-primary)] text-[var(--text-secondary)] hover:border-[var(--interactive-primary)] hover:text-[var(--text-primary)]"
+                        ? "bg-[var(--accent-primary)] text-[var(--accent-primary-foreground)]"
+                        : "border border-[var(--border-primary)] bg-[var(--surface-primary)] text-[var(--text-secondary)] hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)]"
                     }`}
                   >
                     {f.label}

@@ -50,27 +50,32 @@ export function ProductCard({
   description,
 }: ProductCardProps) {
   return (
-    <article className="group flex flex-col border-t border-[var(--border-primary)] pt-[var(--space-4)] transition-colors hover:border-[var(--interactive-primary)]">
+    <article className="group flex flex-col border-t border-[var(--border-primary)] pt-[var(--space-4)] transition-colors hover:border-[var(--accent-primary)]">
       <div className="mb-[var(--space-2)] flex items-center gap-[var(--space-3)]">
-        <span className="font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+        <span className="font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
           {missionDomain}
         </span>
         <span
-          className={`font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] ${maturityColors[maturityStatus]}`}
+          className={`font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] ${maturityColors[maturityStatus]}`}
         >
           {maturityLabels[maturityStatus]}
         </span>
       </div>
 
-      <h3 className="mb-[var(--space-2)] text-[var(--text-h3-size)] font-[var(--text-h3-weight)] text-[var(--text-primary)] group-hover:text-[var(--interactive-primary)] transition-colors">
-        <Link href={`/products/${slug}`}>{name}</Link>
+      <h3 className="mb-[var(--space-2)] text-[var(--text-h3-size)] font-[var(--text-h3-weight)] text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors">
+        <Link
+          href={`/products/${slug}`}
+          className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
+        >
+          {name}
+        </Link>
       </h3>
 
       <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">{description}</p>
 
       <Link
         href={`/products/${slug}`}
-        className="mt-[var(--space-3)] inline-block text-[var(--text-small-size)] text-[var(--interactive-primary)] hover:text-[var(--interactive-primary-hover)] transition-colors"
+        className="mt-[var(--space-3)] inline-block text-[var(--text-small-size)] text-[var(--accent-primary)] hover:text-[var(--accent-primary-hover)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
       >
         View system details &rarr;
       </Link>

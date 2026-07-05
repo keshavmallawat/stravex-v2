@@ -40,12 +40,12 @@ export function SystemsThinking() {
             {systemsContent.principles.map((principle, index) => (
               <li
                 key={principle.title}
-                className="border-l-2 border-[var(--border-primary)] pl-[var(--space-5)] transition-colors hover:border-[var(--interactive-primary)]"
+                className="group border-l-2 border-[var(--border-primary)] pl-[var(--space-5)] transition-colors hover:border-[var(--accent-primary)]"
               >
                 <span className="mb-[var(--space-1)] block text-[var(--text-small-size)] text-[var(--text-muted)]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mb-[var(--space-1)] text-[var(--text-h3-size)] font-[var(--text-h3-weight)] text-[var(--text-primary)]">
+                <h3 className="mb-[var(--space-1)] text-[var(--text-h3-size)] font-[var(--text-h3-weight)] text-[var(--text-primary)] group-hover:text-[var(--accent-primary)] transition-colors">
                   {principle.title}
                 </h3>
                 <p className="text-[var(--text-body-size)] text-[var(--text-secondary)]">

@@ -13,7 +13,7 @@
  *  3. Featured Tech — spacious spacing
  *  4. Philosophy    — default spacing (deliberately quiet)
  *  5. Why Indigenous— default spacing (argument continuation)
- *  6. Proof         — compact spacing (deliberately quiet)
+ *  6. Proof         — default spacing (deliberately quiet)
  *  7. Latest News   — spacious spacing
  *  8. Contact CTA   — spacious spacing
  */

@@ -136,14 +136,14 @@ export function Navigation() {
         "fixed top-0 right-0 left-0 z-[var(--z-sticky)] transition-colors",
         scrolled
           ? "bg-[var(--bg-primary)]/95 backdrop-blur-sm border-b border-[var(--border-primary)]"
-          : "bg-transparent",
+          : "bg-[var(--bg-primary)]/80 backdrop-blur-sm",
       )}
     >
       <div className="mx-auto flex h-[var(--space-section-sm)] max-w-[var(--container-xl)] items-center justify-between px-[var(--space-4)] md:px-[var(--space-6)]">
         {/* Logo */}
         <Link
           href="/"
-          className="text-[var(--text-body-size)] font-[var(--font-weight-semibold)] text-[var(--text-primary)] tracking-[var(--letter-spacing-wide)] transition-colors hover:text-[var(--interactive-primary)]"
+          className="text-[var(--text-body-size)] font-[var(--font-weight-semibold)] text-[var(--text-primary)] tracking-[var(--letter-spacing-wide)] transition-colors hover:text-[var(--accent-primary)]"
           aria-label="Stravex Technologies — Home"
         >
           STRAVEX
@@ -163,7 +163,7 @@ export function Navigation() {
                     "text-[var(--text-small-size)] transition-colors",
                     isActive(link.href)
                       ? "text-[var(--text-primary)] font-[var(--font-weight-medium)]"
-                      : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]",
+                      : "text-[var(--text-secondary)] hover:text-[var(--accent-primary)]",
                   )}
                   aria-current={isActive(link.href) ? "page" : undefined}
                 >
@@ -176,7 +176,7 @@ export function Navigation() {
           {/* Persistent CTA */}
           <Link
             href={persistentCta.href}
-            className="rounded-[var(--radius-sm)] border border-[var(--border-primary)] bg-[var(--surface-primary)] px-[var(--space-4)] py-[var(--space-2)] text-[var(--text-small-size)] font-[var(--font-weight-medium)] text-[var(--text-primary)] transition-colors hover:border-[var(--interactive-primary)] hover:bg-[var(--surface-secondary)]"
+            className="rounded-[var(--radius-sm)] bg-[var(--interactive-primary)] px-[var(--space-4)] py-[var(--space-2)] text-[var(--text-small-size)] font-[var(--font-weight-semibold)] text-[var(--interactive-primary-foreground)] hover:bg-[var(--interactive-primary-hover)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
           >
             {persistentCta.label}
           </Link>
@@ -185,7 +185,7 @@ export function Navigation() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="flex items-center justify-center p-[var(--space-2)] md:hidden"
+          className="flex items-center justify-center p-[var(--space-2)] md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
@@ -222,7 +222,7 @@ export function Navigation() {
                       "block rounded-[var(--radius-sm)] px-[var(--space-3)] py-[var(--space-3)] text-[var(--text-body-size)] transition-colors",
                       isActive(link.href)
                         ? "bg-[var(--surface-secondary)] text-[var(--text-primary)] font-[var(--font-weight-medium)]"
-                        : "text-[var(--text-secondary)] hover:bg-[var(--surface-primary)] hover:text-[var(--text-primary)]",
+                        : "text-[var(--text-secondary)] hover:bg-[var(--surface-primary)] hover:text-[var(--accent-primary)]",
                     )}
                     aria-current={isActive(link.href) ? "page" : undefined}
                   >
@@ -236,7 +236,7 @@ export function Navigation() {
               <Link
                 href={persistentCta.href}
                 onClick={closeMobileMenu}
-                className="block rounded-[var(--radius-sm)] border border-[var(--border-primary)] bg-[var(--surface-primary)] px-[var(--space-4)] py-[var(--space-3)] text-center text-[var(--text-body-size)] font-[var(--font-weight-medium)] text-[var(--text-primary)] transition-colors hover:border-[var(--interactive-primary)] hover:bg-[var(--surface-secondary)]"
+                className="block rounded-[var(--radius-sm)] bg-[var(--interactive-primary)] px-[var(--space-4)] py-[var(--space-3)] text-center text-[var(--text-body-size)] font-[var(--font-weight-semibold)] text-[var(--interactive-primary-foreground)] hover:bg-[var(--interactive-primary-hover)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
               >
                 {persistentCta.label}
               </Link>

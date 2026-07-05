@@ -20,7 +20,7 @@ import { Stack } from "@/components/ui/Stack";
 
 export function ProofSection() {
   return (
-    <Section spacing="compact">
+    <Section spacing="default">
       <Container size="md">
         <Stack gap="md" className="text-center">
           <h2 className="text-[var(--text-h2-size)] font-[var(--text-h2-weight)] text-[var(--text-primary)]">
@@ -36,9 +36,9 @@ export function ProofSection() {
           </p>
           <Link
             href="/contact"
-            className="text-[var(--text-body-size)] text-[var(--interactive-primary)] hover:text-[var(--interactive-primary-hover)] transition-colors"
+            className="text-[var(--text-body-size)] text-[var(--accent-primary)] hover:text-[var(--accent-primary-hover)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
           >
-            Request a briefing →
+            Request a briefing &rarr;
           </Link>
         </Stack>
       </Container>

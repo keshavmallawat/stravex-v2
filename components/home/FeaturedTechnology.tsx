@@ -26,10 +26,10 @@ export function FeaturedTechnology() {
       <Container size="lg">
         <Stack gap="lg">
           <Surface
-            variant="interactive"
+            variant="tertiary"
             className="w-fit rounded-[var(--radius-full)] px-[var(--space-3)] py-[var(--space-1)]"
           >
-            <span className="text-[var(--text-small-size)] text-[var(--text-secondary)]">
+            <span className="font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--accent-primary)]">
               Featured System
             </span>
           </Surface>
@@ -47,13 +47,13 @@ export function FeaturedTechnology() {
               <Cluster gap="sm">
                 <Link
                   href="/products/sentinel-array"
-                  className="rounded-[var(--radius-sm)] bg-[var(--interactive-primary)] px-[var(--space-4)] py-[var(--space-2)] text-[var(--text-small-size)] font-[var(--text-body-weight)] text-[var(--text-inverse)] hover:bg-[var(--interactive-primary-hover)] transition-colors"
+                  className="rounded-[var(--radius-sm)] bg-[var(--interactive-primary)] px-[var(--space-4)] py-[var(--space-2)] text-[var(--text-small-size)] font-[var(--font-weight-semibold)] text-[var(--interactive-primary-foreground)] hover:bg-[var(--interactive-primary-hover)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
                 >
                   View System Details
                 </Link>
                 <Link
                   href="/contact?category=government-defence"
-                  className="rounded-[var(--radius-sm)] border border-[var(--border-primary)] bg-[var(--surface-secondary)] px-[var(--space-4)] py-[var(--space-2)] text-[var(--text-small-size)] text-[var(--text-secondary)] hover:bg-[var(--surface-tertiary)] transition-colors"
+                  className="rounded-[var(--radius-sm)] border border-[var(--border-secondary)] px-[var(--space-4)] py-[var(--space-2)] text-[var(--text-small-size)] text-[var(--text-secondary)] hover:border-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--focus-ring-color)]"
                 >
                   Request Technical Briefing
                 </Link>

@@ -19,13 +19,11 @@
  *  2. Company Thesis      — compact spacing (quiet transition)
  *  3. Why Now             — default spacing
  *  4. Engineering Principles — spacious spacing (dense, two-column)
- *  5. Vision              — compact spacing (deliberately quiet)
+ *  5. Vision              — default spacing (deliberately quiet)
  *  6. CTA                 — spacious spacing (closing)
  *
- * Design Constitution §4.3: One deliberately emphasized section (Hero),
- * one deliberately quiet section (Vision).
- * Design Constitution §4.20: This is an argument, not a story.
- * Design Constitution §4.7: Every headline is a statement, never a question.
+ * Divider rhythm: default between all, lg before major density increases
+ * (WhyNow → EngineeringPrinciples, Vision → CTA)
  */
 
 import type { Metadata } from "next";
@@ -54,9 +52,9 @@ export default function AboutPage() {
       <AboutHero />
       <Divider />
       <CompanyThesis />
-      <Divider spacing="lg" />
-      <WhyNow />
       <Divider />
+      <WhyNow />
+      <Divider spacing="lg" />
       <EngineeringPrinciples />
       <Divider />
       <Vision />

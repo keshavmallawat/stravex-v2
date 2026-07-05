@@ -143,6 +143,10 @@
   --text-body-leading: var(--line-height-relaxed);
   --text-body-weight: var(--font-weight-normal);
 
+  --text-lead-size: 1.125rem;
+  --text-lead-leading: var(--line-height-relaxed);
+  --text-lead-weight: var(--font-weight-normal);
+
   --text-body-lg-size: 1.0625rem;
   --text-body-lg-leading: var(--line-height-relaxed);
   --text-body-lg-weight: var(--font-weight-normal);
@@ -167,6 +171,7 @@
     --text-body-lg-size: 1.125rem;
     --text-small-size: 0.875rem;
     --text-mono-size: 0.875rem;
+    --text-lead-size: 1.25rem;
   }
 }
 
@@ -181,6 +186,7 @@
     --text-body-lg-size: 1.125rem;
     --text-small-size: 0.875rem;
     --text-mono-size: 0.875rem;
+    --text-lead-size: 1.3125rem;
   }
 }
 
@@ -311,7 +317,7 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 :root {
-  --focus-ring-color: var(--interactive-primary);
+  --focus-ring-color: var(--accent-primary);
   --focus-ring-width: 2px;
   --focus-ring-offset: 2px;
   --focus-ring-offset-color: var(--bg-primary);

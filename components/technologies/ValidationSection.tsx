@@ -51,7 +51,7 @@ export function ValidationSection() {
                   className="border-t border-[var(--border-primary)] pt-[var(--space-4)]"
                 >
                   <dt>
-                    <span className="mb-[var(--space-1)] inline-block rounded-[var(--radius-full)] px-[var(--space-2)] py-[var(--space-1)] font-[var(--font-weight-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+                    <span className="mb-[var(--space-1)] inline-block rounded-[var(--radius-full)] px-[var(--space-2)] py-[var(--space-1)] font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
                       {entry.type}
                     </span>
                     <span className="ml-[var(--space-3)] text-[var(--text-h4-size)] font-[var(--text-h4-weight)] text-[var(--text-primary)]">

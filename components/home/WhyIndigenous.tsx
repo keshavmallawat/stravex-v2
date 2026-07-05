@@ -63,6 +63,11 @@ export function WhyIndigenous() {
               </div>
             ))}
           </dl>
+
+          <blockquote className="border-l-2 border-[var(--accent-primary)] pl-[var(--space-5)] italic text-[var(--text-body-lg-size)] leading-[var(--text-body-leading)] text-[var(--text-tertiary)]">
+            When systems are designed elsewhere, adaptation to local conditions is constrained by
+            the original design team&apos;s priorities — not ours.
+          </blockquote>
         </Stack>
       </Container>
     </Section>

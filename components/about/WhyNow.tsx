@@ -35,12 +35,20 @@ export function WhyNow() {
             </p>
           </Stack>
 
+          <blockquote className="border-l-2 border-[var(--accent-primary)] pl-[var(--space-5)] italic text-[var(--text-body-lg-size)] leading-[var(--text-body-leading)] text-[var(--text-tertiary)]">
+            The question is not whether India needs indigenous defence technology. The question is
+            whether we can afford to delay it further.
+          </blockquote>
+
           <Grid columns={{ sm: 1, md: 3 }} gap="lg">
-            {whyNowContent.forces.map((force) => (
+            {whyNowContent.forces.map((force, index) => (
               <div
                 key={force.title}
                 className="border-t border-[var(--border-primary)] pt-[var(--space-4)]"
               >
+                <span className="mb-[var(--space-2)] block font-[var(--font-mono)] text-[var(--text-mono-size)] uppercase tracking-[var(--letter-spacing-wider)] text-[var(--text-muted)]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <h3 className="mb-[var(--space-2)] text-[var(--text-h3-size)] font-[var(--text-h3-weight)] text-[var(--text-primary)]">
                   {force.title}
                 </h3>

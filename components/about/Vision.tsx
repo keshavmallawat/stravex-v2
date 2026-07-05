@@ -21,16 +21,18 @@ import { visionContent } from "@/lib/data/about";
 
 export function Vision() {
   return (
-    <Section spacing="compact">
+    <Section spacing="default">
       <Container size="xl">
-        <Stack gap="lg">
-          <h2 className="max-w-[800px] text-[var(--text-h2-size)] font-[var(--text-h2-weight)] text-[var(--text-primary)]">
-            {visionContent.heading}
-          </h2>
-          <p className="max-w-[720px] text-[var(--text-body-size)] leading-[var(--text-body-leading)] text-[var(--text-secondary)]">
-            {visionContent.body}
-          </p>
-        </Stack>
+        <div className="border-t border-[var(--border-primary)] pt-[var(--space-8)]">
+          <Stack gap="xl">
+            <h2 className="max-w-[800px] text-[var(--text-h2-size)] font-[var(--text-h2-weight)] text-[var(--text-primary)]">
+              {visionContent.heading}
+            </h2>
+            <p className="max-w-[720px] text-[var(--text-body-size)] leading-[var(--text-body-leading)] text-[var(--text-secondary)]">
+              {visionContent.body}
+            </p>
+          </Stack>
+        </div>
       </Container>
     </Section>
   );
