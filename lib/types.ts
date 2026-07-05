@@ -131,6 +131,66 @@ export interface ProductsCTAContent {
   }[];
 }
 
+/* ── About Page Content ────────────────────────────────────────── */
+
+/**
+ * Thesis statement for the About page hero.
+ * The strategic problem Stravex exists to solve.
+ */
+export interface AboutThesis {
+  headline: string;
+  body: string;
+}
+
+/**
+ * The convergence of forces that makes this moment urgent.
+ * Three interlocking trends: threat proliferation, AI maturity, indigenous emphasis.
+ */
+export interface WhyNowContent {
+  heading: string;
+  body: string;
+  forces: {
+    title: string;
+    description: string;
+  }[];
+}
+
+/**
+ * Engineering philosophy and operating principles.
+ * How Stravex thinks about building systems.
+ */
+export interface EngineeringPrinciplesContent {
+  heading: string;
+  body: string;
+  principles: {
+    title: string;
+    description: string;
+  }[];
+}
+
+/**
+ * Vision statement — where this goes.
+ * Restrained, not grandiose. Aspirational without overclaiming.
+ */
+export interface VisionContent {
+  heading: string;
+  body: string;
+}
+
+/**
+ * CTA section content — soft engagement paths for About page visitors.
+ * Route to Team (deepen trust) or Careers (if evaluating as employer).
+ */
+export interface AboutCTAContent {
+  heading: string;
+  body: string;
+  paths: {
+    label: string;
+    href: string;
+    description: string;
+  }[];
+}
+
 /* ── Mission Domains ───────────────────────────────────────────── */
 
 export type MissionDomain = "detection" | "interception" | "autonomy" | "electronics";
