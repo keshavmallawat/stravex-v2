@@ -83,6 +83,54 @@ export interface CTAContent {
   }[];
 }
 
+/* ── Products Page Content ────────────────────────────────────── */
+
+/**
+ * Thesis statement for the Products page hero.
+ * What unifies the product line — the detect-and-intercept thesis.
+ */
+export interface ProductsThesis {
+  headline: string;
+  body: string;
+}
+
+/**
+ * Mission domain summary for the Portfolio Overview map.
+ * Maps operational problems to product categories.
+ */
+export interface MissionDomainSummary {
+  slug: MissionDomain;
+  name: string;
+  description: string;
+  problemStatement: string;
+}
+
+/**
+ * Systems thinking content — integration and lifecycle narrative.
+ * How products work together as operational systems.
+ */
+export interface SystemsContent {
+  heading: string;
+  body: string;
+  principles: {
+    title: string;
+    description: string;
+  }[];
+}
+
+/**
+ * Products CTA content — 4 engagement paths for different buyer types.
+ */
+export interface ProductsCTAContent {
+  heading: string;
+  body: string;
+  paths: {
+    label: string;
+    href: string;
+    description: string;
+  }[];
+}
+
 /* ── Mission Domains ───────────────────────────────────────────── */
 
 export type MissionDomain = "detection" | "interception" | "autonomy" | "electronics";
@@ -96,15 +144,32 @@ export type ProductHierarchyLevel = "system" | "subsystem" | "variant";
 export interface Product {
   slug: string;
   name: string;
+  /** One-line function description — what it does, not how it works. */
+  shortDescription: string;
+  /** Full function description — what it does and why it matters. */
   description: string;
+  /** Primary categorisation: what operational problem it solves. */
   missionDomain: MissionDomain;
+  /** Secondary categorisation: what technology it uses. */
   technologyDomains: TechnologyDomain[];
+  /** Always visible — never imply more maturity than genuinely exists. */
   maturityStatus: MaturityStatus;
+  /** System → Subsystem → Variant hierarchy. */
   hierarchyLevel: ProductHierarchyLevel;
-  parentSystem?: string; // slug of parent system if this is a subsystem/variant
+  /** Slug of parent system if this is a subsystem or variant. */
+  parentSystem?: string;
+  /** Operational context — where and how the system is deployed. */
+  deploymentContext: string;
+  /** Current engineering status — honest framing of where the product is. */
+  currentStatus: string;
+  /** Directional roadmap — cautious, never overpromised. */
+  roadmap: string;
+  /** Public-tier specifications. Restricted specs available under briefing. */
   specifications?: Record<string, string>;
-  relatedTechnologies: string[]; // slugs
-  relatedProducts: string[]; // slugs
+  /** Links back to underlying technology domains. */
+  relatedTechnologies: string[];
+  /** Same Mission Domain siblings. */
+  relatedProducts: string[];
 }
 
 /* ── News ──────────────────────────────────────────────────────── */
